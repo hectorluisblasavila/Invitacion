@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Cumpleaños</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: rgb(135, 215, 244);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: rgb(36, 36, 36);
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .option-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .option-btn:hover {
+    background-color: #e9ecef;
+  }
+
+  .option-btn.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+
+    #timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4500; /* Naranja llamativo */
+  text-align: center;
+  margin-bottom: 15px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="welcome">
+      <img src="hectorblas.jpg" alt="Cumpleañero">
+      <h1>¡Estás invitado al cumpleaños de HECTOR BLAS!</h1>
+      <p>Para saber si necesitas llevar regalo, responde estas preguntas:
+        (el costo por error es de 100 soles y seran 4 preguntas sencillas jejeje)
+      </p>
+      <button onclick="startQuiz()">¡Comenzar!</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <button onclick="nextQuestion()">Siguiente</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2 id="finalMessage"></h2>
+      <p id="giftMessage"></p>
+    </div>
+  </div>
+
+  <div id="timer" style="font-size: 20px; color: #ff0000; margin-bottom: 20px;">
+    ¡Tendras: 10s por pregunta para responder
+    si me conoces te sera mas que suficiente jejeje!
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
